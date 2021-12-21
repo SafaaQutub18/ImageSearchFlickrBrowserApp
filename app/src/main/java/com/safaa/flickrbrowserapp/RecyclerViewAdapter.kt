@@ -29,12 +29,15 @@ class RecyclerViewAdapter(val mainActivity: MainActivity) : RecyclerView.Adapter
         var currentPhoto = photosList[position]
         holder.binding.apply {
             cardLayout.setBackgroundResource(R.drawable.custom_button);
+
             titleTv.text = currentPhoto.title
             Glide.with(mainActivity)
                 .load(currentPhoto.url_h)
                 .override(280,180)
                 .into(imageV)
-            cardLayout.setOnClickListener { mainActivity.openPhoto(currentPhoto.url_h) }
+            cardLayout.setOnClickListener {
+                mainActivity.openPhoto(currentPhoto.url_h)
+            }
 
         }
     }

@@ -6,8 +6,6 @@ import retrofit2.http.*
 
 
 interface ApiInterface {
-
-
     @GET
     fun getPhotos(@Url url: String?): Call<Photo>
 }
