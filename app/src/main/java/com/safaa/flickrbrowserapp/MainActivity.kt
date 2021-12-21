@@ -3,8 +3,11 @@ package com.safaa.flickrbrowserapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.bumptech.glide.Glide
 import com.safaa.flickrbrowserapp.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,8 +34,15 @@ class MainActivity : AppCompatActivity() {
         recyclerV.layoutManager = GridLayoutManager(this@MainActivity,2)
 
         searchBtn.setOnClickListener {
+            recyclerV.isVisible = true
             getAPIdata(photoNameET.text.toString())
         }
+
+            backBtn.setOnClickListener {
+                openIV.isVisible = false
+                backBtn.isVisible = false
+                recyclerV.isVisible = true
+            }
         }
     }
 
@@ -65,6 +75,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openPhoto(imageurl: String) {
+        binding.apply {
+            openIV.isVisible = true
+            backBtn.isVisible = true
+            recyclerV.isVisible = false
+
+            Glide.with(this@MainActivity)
+                .load(imageurl)
+                .into(openIV)
+        }
+
+
 
     }
 }
