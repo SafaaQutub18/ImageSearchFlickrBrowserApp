@@ -1,4 +1,4 @@
-package com.safaa.flickrbrowserapp
+package com.safaa.flickrbrowserapp.Services
 
 import android.util.Log
 

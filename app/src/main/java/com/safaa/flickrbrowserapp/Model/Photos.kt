@@ -1,4 +1,4 @@
-package com.safaa.flickrbrowserapp
+package com.safaa.flickrbrowserapp.Model
 
 data class Photos(
     val page: Int,

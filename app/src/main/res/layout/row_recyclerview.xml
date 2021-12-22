@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/cardLayout"
     android:layout_margin="10dp"
+    android:backgroundTint="@color/transparent"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,16 +15,18 @@
             android:id="@+id/imageV"
             android:layout_width="180dp"
             android:layout_height="180dp"
+            android:scaleType="centerCrop"
             android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/titleTv"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:gravity="center"
             android:text="name"
             android:textColor="#151515"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:background="@drawable/custom_button"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

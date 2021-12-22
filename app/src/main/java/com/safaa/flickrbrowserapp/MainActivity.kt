@@ -3,11 +3,13 @@ package com.safaa.flickrbrowserapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
+import com.safaa.flickrbrowserapp.Model.Photo
+import com.safaa.flickrbrowserapp.Model.PhotoX
+import com.safaa.flickrbrowserapp.Services.ApiInterface
+import com.safaa.flickrbrowserapp.Services.FlickerAPI
 import com.safaa.flickrbrowserapp.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,6 +1,6 @@
-package com.safaa.flickrbrowserapp
+package com.safaa.flickrbrowserapp.Services
 
-import okhttp3.ResponseBody
+import com.safaa.flickrbrowserapp.Model.Photo
 import retrofit2.Call
 import retrofit2.http.*
 

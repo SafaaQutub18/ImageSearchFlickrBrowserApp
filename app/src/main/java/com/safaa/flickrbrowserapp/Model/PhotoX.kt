@@ -1,4 +1,4 @@
-package com.safaa.flickrbrowserapp
+package com.safaa.flickrbrowserapp.Model
 
 data class PhotoX(
     val datetaken: String,
